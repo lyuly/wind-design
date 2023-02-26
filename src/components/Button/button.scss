@@ -63,7 +63,7 @@
   }
 
   &--dashed {
-    @apply border-dashed text-black;
+    @apply border-dashed border-gray-300 text-black;
   }
 
   &--lg {
@@ -81,5 +81,9 @@
   &--link {
     @apply text-blue-600 decoration-current shadow-none;
     @apply hover:opacity-50;
+  }
+
+  &--round {
+    @apply rounded-full;
   }
 }

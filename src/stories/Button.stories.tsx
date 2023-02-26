@@ -91,6 +91,14 @@ Gost.args = {
 }
 Gost.storyName = 'Gost Button 幽灵按钮'
 
+export const Round = Template.bind({})
+Round.args = {
+  btnType: 'default',
+  round: true,
+  children: 'Round Button',
+}
+Round.storyName = 'Round Button 圆角按钮'
+
 export const Large = Template.bind({})
 Large.args = {
   size: 'lg',

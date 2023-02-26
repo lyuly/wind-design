@@ -34,6 +34,7 @@ interface BaseButtonProps {
   children?: ReactNode
   href?: string
   gost?: boolean
+  round?: boolean
 }
 
 type AnchorButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
@@ -49,6 +50,7 @@ const Button = (props: ButtonProps) => {
     children,
     href,
     gost,
+    round,
     ...restProps
   } = props
 
@@ -57,6 +59,7 @@ const Button = (props: ButtonProps) => {
     [`windyButton--${size}`]: size !== 'md',
     'windyButton--disabled': disabled,
     [`windyButton--${btnType}_gost`]: gost,
+    'windyButton--round': round,
   })
 
   if (btnType === 'link' && href) {
