@@ -61,7 +61,7 @@ const Button = (props: ButtonProps) => {
 
   if (btnType === 'link' && href) {
     return (
-      <a className={cls} href={!disabled ? href : 'javascript:void(0)'} {...restProps}>
+      <a className={cls} href={href} {...restProps}>
         {children}
       </a>
     )
