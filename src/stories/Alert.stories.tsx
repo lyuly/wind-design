@@ -43,6 +43,13 @@ Info.args = {
 }
 Info.storyName = 'Info Alert 信息警告'
 
+export const Danger = Template.bind({})
+Danger.args = {
+  type: 'danger',
+  children: 'Danger Alert'
+}
+Danger.storyName = 'Danger Alert 错误警告'
+
 export const Large = Template.bind({})
 Large.args = {
   type: 'default',

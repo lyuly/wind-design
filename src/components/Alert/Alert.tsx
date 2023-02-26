@@ -30,7 +30,7 @@ const Alert = (props: AlertProps) => {
 }
 
 Alert.defaultProps = {
-  type: 'success'
+  type: 'default'
 }
 
 export default Alert

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import classNames from 'classnames'
 
-const ButtonTypes = ['default', 'primary', 'success', 'info', 'danger', 'warning', 'link']
+const ButtonTypes = ['default', 'primary', 'success', 'info', 'danger', 'warning', 'link', 'text', 'dashed']
 const ButtonSizes = ['lg', 'sm', 'md']
 
 export type ButtonSize = typeof ButtonSizes[number]
@@ -13,6 +13,7 @@ interface BaseButtonProps {
   btnType?: ButtonType
   children?: ReactNode
   href?: string
+  gost?: boolean
 }
 
 type AnchorButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
@@ -20,17 +21,18 @@ type AnchorButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElemen
 export type ButtonProps = Partial<AnchorButtonProps>
 
 const Button = (props: ButtonProps) => {
-  const { btnType = 'default', className, disabled, size = 'md', children, href, ...restProps } = props
+  const { btnType = 'default', className, disabled, size = 'md', children, href, gost, ...restProps } = props
 
     const cls = classNames('windyButton', className, {
       [`windyButton--${btnType}`] : btnType,
       [`windyButton--${size}`] : size !== 'md',
-      'windyButton-disabled': btnType === 'link' && disabled,
+      'windyButton--disabled': disabled,
+      [`windyButton--${btnType}_gost`] : gost
     })
 
   if (btnType === 'link' && href) {
     return (
-      <a className={cls} href={href} {...restProps}>
+      <a className={cls} href={!disabled ? href : 'javascript:void(0)'} {...restProps}>
         {children}
       </a>
     )
@@ -49,7 +51,7 @@ const Button = (props: ButtonProps) => {
 
 Button.defaultProps = {
   disabled: false,
-  type: 'default'
+  btnType: 'default'
 }
 
 export default Button

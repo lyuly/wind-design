@@ -63,6 +63,36 @@ Disabled.args = {
 }
 Disabled.storyName = 'Disabled Button 禁用按钮'
 
+export const Link = Template.bind({})
+Link.args = {
+  btnType: 'link',
+  href: 'https://www.google.com',
+  children: 'Link Button'
+}
+Link.storyName = 'Link Button 链接按钮'
+
+export const Text = Template.bind({})
+Text.args = {
+  btnType: 'text',
+  children: 'Text Button'
+}
+Text.storyName = 'Text Button 文本按钮'
+
+export const Dashed = Template.bind({})
+Dashed.args = {
+  btnType: 'dashed',
+  children: 'Dashed Button'
+}
+Dashed.storyName = 'Dashed Button 虚线按钮'
+
+export const Gost = Template.bind({})
+Gost.args = {
+  btnType: 'primary',
+  gost: true,
+  children: 'Gost Button'
+}
+Gost.storyName = 'Gost Button 幽灵按钮'
+
 export const Large = Template.bind({})
 Large.args = {
   size: 'lg',
@@ -76,11 +106,3 @@ Small.args = {
   children: 'Small Button'
 }
 Small.storyName = 'Small Button 小按钮'
-
-export const Link = Template.bind({})
-Link.args = {
-  btnType: 'link',
-  href: 'https://www.google.com',
-  children: 'Link Button'
-}
-Link.storyName = 'Link Button 链接按钮'
