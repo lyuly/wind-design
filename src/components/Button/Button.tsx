@@ -1,6 +1,16 @@
 import React, { ReactNode } from 'react'
 import classNames from 'classnames'
 
+/* 
+我们的按钮具有以下属性:
+btnType: 类型
+size: 尺寸
+disabled: 是否禁用
+href: 链接地址
+gost: 幽灵按钮
+children: 按钮中的文本
+*/
+
 const ButtonTypes = ['default', 'primary', 'success', 'info', 'danger', 'warning', 'link', 'text', 'dashed']
 const ButtonSizes = ['lg', 'sm', 'md']
 

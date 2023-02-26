@@ -1,6 +1,13 @@
 import { type ReactNode } from 'react'
 import classNames from 'classnames'
 
+/* 
+我们的警告提示具有以下属性:
+type: 类型
+size: 尺寸
+children: 文本
+*/
+
 const AlertTypes = ['default', 'success', 'warning', 'info', 'danger']
 const AlertSizes = ['lg', 'sm', 'md']
 
