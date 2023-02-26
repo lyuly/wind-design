@@ -1,4 +1,4 @@
-import './index.scss';
+import './index.scss'
 
 export { default as Button } from './components/Button'
 export { default as Alert } from './components/Alert'

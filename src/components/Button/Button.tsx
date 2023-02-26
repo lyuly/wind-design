@@ -11,11 +11,21 @@ gost: 幽灵按钮
 children: 按钮中的文本
 */
 
-const ButtonTypes = ['default', 'primary', 'success', 'info', 'danger', 'warning', 'link', 'text', 'dashed']
+const ButtonTypes = [
+  'default',
+  'primary',
+  'success',
+  'info',
+  'danger',
+  'warning',
+  'link',
+  'text',
+  'dashed',
+]
 const ButtonSizes = ['lg', 'sm', 'md']
 
-export type ButtonSize = typeof ButtonSizes[number]
-export type ButtonType = typeof ButtonTypes[number]
+export type ButtonSize = (typeof ButtonSizes)[number]
+export type ButtonType = (typeof ButtonTypes)[number]
 interface BaseButtonProps {
   className?: string
   disabled?: boolean
@@ -31,14 +41,23 @@ type AnchorButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElemen
 export type ButtonProps = Partial<AnchorButtonProps>
 
 const Button = (props: ButtonProps) => {
-  const { btnType = 'default', className, disabled, size = 'md', children, href, gost, ...restProps } = props
+  const {
+    btnType = 'default',
+    className,
+    disabled,
+    size = 'md',
+    children,
+    href,
+    gost,
+    ...restProps
+  } = props
 
-    const cls = classNames('windyButton', className, {
-      [`windyButton--${btnType}`] : btnType,
-      [`windyButton--${size}`] : size !== 'md',
-      'windyButton--disabled': disabled,
-      [`windyButton--${btnType}_gost`] : gost
-    })
+  const cls = classNames('windyButton', className, {
+    [`windyButton--${btnType}`]: btnType,
+    [`windyButton--${size}`]: size !== 'md',
+    'windyButton--disabled': disabled,
+    [`windyButton--${btnType}_gost`]: gost,
+  })
 
   if (btnType === 'link' && href) {
     return (
@@ -48,11 +67,7 @@ const Button = (props: ButtonProps) => {
     )
   } else {
     return (
-      <button
-        className={cls}
-        disabled={disabled}
-        {...restProps}
-      >
+      <button className={cls} disabled={disabled} {...restProps}>
         {children}
       </button>
     )
@@ -61,7 +76,7 @@ const Button = (props: ButtonProps) => {
 
 Button.defaultProps = {
   disabled: false,
-  btnType: 'default'
+  btnType: 'default',
 }
 
 export default Button

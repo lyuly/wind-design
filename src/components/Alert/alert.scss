@@ -1,10 +1,10 @@
 .windyAlert {
   @apply p-4 mb-4 text-base rounded-lg;
-  
+
   &--default {
     @apply text-blue-800 bg-blue-50 dark:bg-gray-800 dark:text-blue-400;
   }
-  
+
   &--danger {
     @apply text-red-800 bg-red-50 dark:bg-gray-800 dark:text-red-400;
   }
