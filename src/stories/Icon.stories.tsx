@@ -14,9 +14,10 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args}></Icon>
 
 export const Default = Template.bind({})
 Default.args = {
-  name: 'daka',
+  name: 'daimawangzhan',
+  style: { color: 'black' },
 }
-Default.storyName = 'Clock in Icon 打卡图标'
+Default.storyName = 'Default Icon 默认图标'
 
 export const Loading = Template.bind({})
 Loading.args = {
@@ -33,7 +34,7 @@ Search.storyName = 'Search Icon 搜索图标'
 
 export const Color = Template.bind({})
 Color.args = {
-  name: 'redu',
+  name: 'aixin',
   style: { color: 'red' },
 }
 Color.storyName = 'Color Icon 多彩图标'

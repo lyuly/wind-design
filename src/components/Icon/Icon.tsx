@@ -18,6 +18,7 @@ export type IconProps = {
   show?: boolean
   style?: React.CSSProperties
   url?: string
+  position?: string
 }
 
 const IconFont: React.FC<IconProps> = ({ name, onClick, className, style }) => {
@@ -34,7 +35,16 @@ const IconFont: React.FC<IconProps> = ({ name, onClick, className, style }) => {
   )
 }
 
-const Icon = ({ href, className, loading, onClick, show, url, ...res }: IconProps) => {
+const Icon = ({
+  href,
+  className,
+  loading,
+  onClick,
+  position = 'left',
+  show,
+  url,
+  ...res
+}: IconProps) => {
   const _onClick = useCallback(
     (e: React.MouseEvent<SVGElement>): void => {
       onClick?.(e)
@@ -46,6 +56,7 @@ const Icon = ({ href, className, loading, onClick, show, url, ...res }: IconProp
   const cls = classNames(className, {
     'cursor-pointer': href || onClick,
     'icon--loading': loading,
+    [`icon--position_${position}`]: position,
   })
 
   useMount(() => {
@@ -56,7 +67,6 @@ const Icon = ({ href, className, loading, onClick, show, url, ...res }: IconProp
 
 Icon.defaultProps = {
   show: true,
-  loading: false,
 }
 
 export default Icon

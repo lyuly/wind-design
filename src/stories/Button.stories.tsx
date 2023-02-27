@@ -112,3 +112,20 @@ Small.args = {
   children: 'Small Button',
 }
 Small.storyName = 'Small Button 小按钮'
+
+export const Icon = Template.bind({})
+Icon.args = {
+  btnType: 'default',
+  iconName: 'aixin',
+  children: 'Icon Button',
+}
+Icon.storyName = 'Icon Button 图标按钮'
+
+export const Loading = Template.bind({})
+Loading.args = {
+  btnType: 'primary',
+  iconName: 'loading',
+  children: 'Loading Button',
+  loading: true,
+}
+Loading.storyName = 'Loading Button 加载按钮'
