@@ -8,11 +8,8 @@ size: 尺寸
 children: 文本
 */
 
-const AlertTypes = ['default', 'success', 'warning', 'info', 'danger']
-const AlertSizes = ['lg', 'sm', 'md']
-
-export type AlertType = (typeof AlertTypes)[number]
-export type AlertSize = (typeof AlertSizes)[number]
+export type AlertType = 'default' | 'success' | 'warning' | 'info' | 'danger'
+export type AlertSize = 'lg' | 'sm' | 'md'
 
 export interface AlertProps {
   className?: string

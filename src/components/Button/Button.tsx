@@ -10,23 +10,21 @@ disabled: 是否禁用
 href: 链接地址
 gost: 幽灵按钮
 children: 按钮中的文本
+iconName: 图标名字
+loading: 加载图标
 */
 
-const ButtonTypes = [
-  'default',
-  'primary',
-  'success',
-  'info',
-  'danger',
-  'warning',
-  'link',
-  'text',
-  'dashed',
-]
-const ButtonSizes = ['lg', 'sm', 'md']
-
-export type ButtonSize = (typeof ButtonSizes)[number]
-export type ButtonType = (typeof ButtonTypes)[number]
+export type ButtonSize = 'lg' | 'sm' | 'md'
+export type ButtonType =
+  | 'default'
+  | 'primary'
+  | 'success'
+  | 'info'
+  | 'danger'
+  | 'warning'
+  | 'link'
+  | 'text'
+  | 'dashed'
 interface BaseButtonProps {
   className?: string
   disabled?: boolean
@@ -75,8 +73,8 @@ const Button = (props: ButtonProps) => {
   } else {
     return (
       <button className={cls} disabled={disabled} {...restProps}>
-        {children}
         <Icon name={iconName as string} show={iconName !== undefined} loading={loading}></Icon>
+        {children}
       </button>
     )
   }

@@ -7,7 +7,11 @@ name图标名字
 onClick点击事件
 href链接
 url不同图标来源
+style自定义CSS属性
+size图标尺寸
 */
+
+export type IconSize = 'lg' | 'sm' | 'md'
 
 export type IconProps = {
   name: string
@@ -18,6 +22,7 @@ export type IconProps = {
   show?: boolean
   style?: React.CSSProperties
   url?: string
+  size?: IconSize
   position?: string
 }
 
@@ -43,6 +48,7 @@ const Icon = ({
   position = 'left',
   show,
   url,
+  size = 'md',
   ...res
 }: IconProps) => {
   const _onClick = useCallback(
@@ -56,6 +62,7 @@ const Icon = ({
   const cls = classNames(className, {
     'cursor-pointer': href || onClick,
     'icon--loading': loading,
+    [`icon--${size}`]: size,
     [`icon--position_${position}`]: position,
   })
 
