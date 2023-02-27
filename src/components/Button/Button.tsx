@@ -63,9 +63,9 @@ const Button = (props: ButtonProps) => {
 
   if (btnType === 'link' && href) {
     return (
-      <a className={cls} href={href} {...restProps}>
-        {children}
-      </a>
+      <button className={cls} disabled={disabled} {...restProps}>
+        <a href={href}>{children}</a>
+      </button>
     )
   } else {
     return (
