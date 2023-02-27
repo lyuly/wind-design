@@ -54,12 +54,11 @@ const Button = (props: ButtonProps) => {
     ...restProps
   } = props
 
-  const cls = classNames('windyButton', className, {
-    [`windyButton--${btnType}`]: btnType,
-    [`windyButton--${size}`]: size !== 'md',
-    'windyButton--disabled': disabled,
-    [`windyButton--${btnType}_gost`]: gost,
-    'windyButton--round': round,
+  const cls = classNames('btn', className, {
+    [`btn--${btnType}`]: btnType,
+    [`btn--${size}`]: size !== 'md',
+    [`btn--${btnType}_gost`]: gost,
+    'btn--round': round,
   })
 
   if (btnType === 'link' && href) {

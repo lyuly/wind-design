@@ -1,59 +1,13 @@
-.windyButton {
+.btn {
   @apply inline-block relative leading-4 text-blue-500 whitespace-nowrap text-center rounded-md bg-none border border-solid border-gray-200;
   @apply py-3 px-6;
 
-  &[disabled],
-  &[disabled]:hover {
-    @apply cursor-not-allowed opacity-60 shadow-none bg-slate-200 border-gray-300 text-gray-500;
-  }
+  &.disabled,
+  &[disabled] {
+    @apply cursor-not-allowed opacity-60 shadow-none;
 
-  &--default {
-    @apply text-black;
-    @apply hover:text-blue-500 hover:border-blue-500;
-  }
-
-  &--primary {
-    @apply bg-blue-500 text-white;
-    @apply hover:bg-blue-700 text-white;
-
-    &_gost {
-      @apply text-blue-500 bg-white hover:text-white border border-blue-700 hover:bg-blue-800 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600;
-    }
-  }
-
-  &--warning {
-    @apply bg-orange-500 text-white;
-    @apply hover:bg-orange-700 text-white;
-
-    &_gost {
-      @apply text-orange-500 bg-white hover:text-white border border-orange-700 hover:bg-orange-800 dark:border-orange-500 dark:text-orange-500 dark:hover:text-white dark:hover:bg-orange-600;
-    }
-  }
-
-  &--info {
-    @apply bg-gray-500 text-white;
-    @apply hover:bg-gray-700 text-white;
-
-    &_gost {
-      @apply text-gray-500 bg-white hover:text-white border border-gray-700 hover:bg-gray-800 dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:hover:bg-gray-600;
-    }
-  }
-
-  &--success {
-    @apply bg-green-500 text-white;
-    @apply hover:bg-green-700 text-white;
-
-    &_gost {
-      @apply text-green-500 bg-white hover:text-white border border-green-700 hover:bg-green-800 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600;
-    }
-  }
-
-  &--danger {
-    @apply bg-red-500 text-white;
-    @apply hover:bg-red-700 text-white;
-
-    &_gost {
-      @apply text-red-500 bg-white hover:text-white border border-red-700 hover:bg-red-800 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600;
+    > * {
+      @apply pointer-events-none;
     }
   }
 
@@ -85,5 +39,85 @@
 
   &--round {
     @apply rounded-full;
+  }
+}
+
+.btn--default {
+  @apply text-black;
+  @apply hover:text-blue-500 hover:border-blue-500;
+
+  &:disabled,
+  &.disabled {
+    @apply text-black border-gray-200;
+  }
+}
+
+.btn--primary {
+  @apply bg-blue-500 text-white;
+  @apply hover:bg-blue-700 text-white;
+
+  &:disabled,
+  &.disabled {
+    @apply text-white border-gray-200 bg-blue-500;
+  }
+
+  &_gost {
+    @apply text-blue-500 bg-white hover:text-white border border-blue-700 hover:bg-blue-800 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600;
+  }
+}
+
+.btn--warning {
+  @apply bg-orange-500 text-white;
+  @apply hover:bg-orange-700 text-white;
+
+  &:disabled,
+  &.disabled {
+    @apply text-white border-gray-200 bg-orange-500;
+  }
+
+  &_gost {
+    @apply text-orange-500 bg-white hover:text-white border border-orange-700 hover:bg-orange-800 dark:border-orange-500 dark:text-orange-500 dark:hover:text-white dark:hover:bg-orange-600;
+  }
+}
+
+.btn--info {
+  @apply bg-gray-500 text-white;
+  @apply hover:bg-gray-700 text-white;
+
+  &:disabled,
+  &.disabled {
+    @apply text-white border-gray-200 bg-gray-500;
+  }
+
+  &_gost {
+    @apply text-gray-500 bg-white hover:text-white border border-gray-700 hover:bg-gray-800 dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:hover:bg-gray-600;
+  }
+}
+
+.btn--success {
+  @apply bg-green-500 text-white;
+  @apply hover:bg-green-700 text-white;
+
+  &:disabled,
+  &.disabled {
+    @apply text-white border-gray-200 bg-green-500;
+  }
+
+  &_gost {
+    @apply text-green-500 bg-white hover:text-white border border-green-700 hover:bg-green-800 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600;
+  }
+}
+
+.btn--danger {
+  @apply bg-red-500 text-white;
+  @apply hover:bg-red-700 text-white;
+
+  &:disabled,
+  &.disabled {
+    @apply text-white border-gray-200 bg-red-500;
+  }
+
+  &_gost {
+    @apply text-red-500 bg-white hover:text-white border border-red-700 hover:bg-red-800 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600;
   }
 }
