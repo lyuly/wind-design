@@ -1,0 +1,7 @@
+.icon {
+  @apply w-6 h-6;
+
+  &--loading {
+    @apply animate-spin;
+  }
+}
