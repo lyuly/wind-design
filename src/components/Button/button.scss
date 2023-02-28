@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-flex items-center text-center leading-4 text-blue-500 whitespace-nowrap rounded-md bg-none border border-solid border-gray-200;
+  @apply inline-flex items-center justify-center leading-4 text-blue-500 whitespace-nowrap rounded-md bg-none border border-solid border-gray-200;
   @apply py-3 px-6;
 
   &.disabled,

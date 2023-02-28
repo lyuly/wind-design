@@ -28,6 +28,9 @@ export type IconProps = {
 
 const IconFont: React.FC<IconProps> = ({ name, onClick, className, style }) => {
   // console.log(style)
+  const cls = classNames(className, {
+    icon: className,
+  })
   return (
     <svg
       onClick={onClick}
