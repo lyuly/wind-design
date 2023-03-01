@@ -1,8 +1,9 @@
 import classNames from 'classnames'
-import { ReactNode } from 'react'
+import { memo, ReactNode } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 /* 
-在这里我们用了a标签实现跳转，后续得修改
+在这里我们使用react-router实现跳转
 label 标签
 to 链接
 active 活动
@@ -21,10 +22,22 @@ export interface BreadcrumbProps {
   style?: React.CSSProperties
 }
 
-export const Breadcrumb: React.FC<BreadcrumbProps> = (props) => {
+export const Breadcrumb = (props: BreadcrumbProps) => {
   const { className, options, iconType, style, ...restProps } = props
 
   const cls = classNames('breadcrumb', className)
+
+  const navigate = useNavigate()
+
+  const Goto = (url: string) => {
+    if (!url) return
+    if (url && url.startsWith('http')) {
+      window.open(url)
+    } else {
+      navigate(url)
+    }
+    return
+  }
 
   return (
     <div className={cls} style={style} {...restProps}>
@@ -36,12 +49,12 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = (props) => {
               item.active ? 'breadcrumb-active' : ''
             }`}
           >
-            <a
+            <span
               className={`${item.to ? 'breadcrumb-isPath' : ''}`}
-              href={item.to}
+              onClick={() => Goto(item.to)}
             >
               {item.label}
-            </a>
+            </span>
             {index !== options.length - 1 ? (
               <div className='breadcrumb-parting'>
                 {iconType === 'sprit' ? (
@@ -83,4 +96,4 @@ Breadcrumb.defaultProps = {
   iconType: 'sprit',
 }
 
-export default Breadcrumb
+export default memo(Breadcrumb)

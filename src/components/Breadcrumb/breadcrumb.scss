@@ -2,10 +2,14 @@
   @apply inline-flex items-center space-x-1 md:space-x-3;
 
   .breadcrumb-item {
-    @apply inline-flex items-center dark:text-gray-400;
+    @apply inline-flex items-center select-none dark:text-white;
+
+    span {
+      @apply cursor-default;
+    }
 
     .breadcrumb-isPath {
-      @apply text-sm hover:text-blue-500 hover:font-medium;
+      @apply cursor-pointer text-sm text-gray-500 dark:text-gray-300 hover:bg-slate-200 hover:text-black;
     }
   }
 
