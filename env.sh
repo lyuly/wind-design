@@ -1,3 +1,3 @@
 #!/usr/local/bin/fish
-
-export NODE_OPTIONS=--openssl-legacy-provider
+nvm use v16.19.0 
+# export NODE_OPTIONS=--openssl-legacy-provider

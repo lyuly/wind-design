@@ -1,0 +1,26 @@
+.breadcrumb {
+  @apply inline-flex items-center space-x-1 md:space-x-3;
+
+  .breadcrumb-item {
+    @apply inline-flex items-center select-none dark:text-white;
+
+    span {
+      @apply cursor-default;
+    }
+
+    .breadcrumb-isPath {
+      @apply cursor-pointer text-sm text-gray-500 dark:text-gray-300 hover:bg-slate-200 hover:text-black;
+    }
+  }
+
+  .breadcrumb-active {
+    @apply font-medium;
+  }
+
+  .breadcrumb-parting {
+    @apply inline-flex items-center;
+    svg {
+      @apply w-4 h-4 fill-current;
+    }
+  }
+}
