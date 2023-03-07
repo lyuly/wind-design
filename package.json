@@ -1,101 +1,23 @@
 {
-  "name": "wind-design",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "types": "./dist/index.d.ts",
-  "main": "./dist/wind-design.umd.js",
-  "module": "./dist/wind-design.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/wind-design.es.js",
-      "require": "./dist/wind-design.umd.js"
-    },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
-    }
-  },
-  "files": [
-    "dist/*"
-  ],
-  "keywords": [
-    "react",
-    "tailwindcss",
-    "typescript",
-    "components",
-    "UI",
-    "vite"
-  ],
+  "name": "windy",
+  "version": "1.0.0",
+  "description": "<img src=\"https://img.shields.io/tokei/lines/github/lyuly/wind-design\"> <img src=\"https://img.shields.io/github/last-commit/lyuly/wind-design\">",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "prepare": "husky install",
-    "lint": "lint-staged"
+    "prepare": "husky install"
   },
-  "lint-staged": {
-    "src/**/*.{jsx,tsx,js,ts}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@ant-design/react-slick": "^1.0.0",
-    "classnames": "^2.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.2",
-    "react-use": "^17.4.0"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-vite": "^0.4.2",
-    "@storybook/react": "^6.5.16",
-    "@storybook/testing-library": "^0.0.13",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@typescript-eslint/eslint-plugin": "^5.53.0",
-    "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.13",
-    "babel-loader": "^8.3.0",
-    "eslint": "^8.35.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^34.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.2",
-    "postcss": "^8.4.21",
-    "prettier": "2.8.4",
-    "sass": "^1.58.3",
-    "stylelint-config-recommended": "^10.0.1",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.0"
+    "husky": "^8.0.0",
+    "typescript": "*"
   }
 }
