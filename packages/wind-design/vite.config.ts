@@ -1,16 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path, { resolve } from 'path'
-import * as pkg from './package.json'
-import classNames from 'classnames'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path, { resolve } from 'path';
+import * as pkg from './package.json';
+import classNames from 'classnames';
 
-const externals = [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.dependencies || {})]
+const externals = [
+  ...Object.keys(pkg.dependencies || {}),
+  ...Object.keys(pkg.dependencies || {}),
+];
 
 export default defineConfig({
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
-    }
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
   plugins: [react()],
   build: {
@@ -19,17 +22,17 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, './src/index.tsx'),
       name: 'wind-design',
-      fileName: (format: string) => `wind-design.${format}.js`
+      fileName: (format: string) => `wind-design.${format}.js`,
     },
     rollupOptions: {
       external: externals,
       output: {
         globals: {
           react: 'React',
-          classNames: 'classnames'
+          classNames: 'classnames',
         },
-        exports: 'named'
-      }
-    }
-  }
-})
+        exports: 'named',
+      },
+    },
+  },
+});

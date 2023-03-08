@@ -4,28 +4,26 @@
  * @order 1
  */
 
-import React from 'react'
-import { Breadcrumb } from 'wind-design'
-import 'wind-design/dist/style.css'
+import React from 'react';
+import { Breadcrumb } from 'wind-design';
+import 'wind-design/dist/style.css';
 
 const options = [
   {
     label: 'Home',
-    to: '/'
+    to: '/',
   },
   {
     label: 'category',
-    to: 'https://www.google.com'
+    to: 'https://www.google.com',
   },
   {
-    label: 'fruit'
-  }
-]
+    label: 'fruit',
+  },
+];
 
 const Default = () => {
-  return (
-    <Breadcrumb options={options}/>
-  )
-}
+  return <Breadcrumb options={options} />;
+};
 
-export default Default
+export default Default;

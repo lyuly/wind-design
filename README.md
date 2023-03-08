@@ -6,10 +6,10 @@
 
 > faster, flexible, reborn, using tailwindcss React component library
 
-* 🚀  Less code, faster compilation
-* ⚒️  Easily customizable, utility-first framework Tailwind CSS
-* 🌲  Just import the components you need and don't worry about size
-* 🎉  Typescript、Vite、Tailwind CSS、React、storybook...
+- 🚀 Less code, faster compilation
+- ⚒️ Easily customizable, utility-first framework Tailwind CSS
+- 🌲 Just import the components you need and don't worry about size
+- 🎉 Typescript、Vite、Tailwind CSS、React、storybook...
 
 ## 📥 Getting Started
 
@@ -28,7 +28,6 @@ npm run build-storybook
 ```
 
 ## About me
-
 
 ## Contributors
 

@@ -4,16 +4,16 @@
  * @order 5
  */
 
-import React from 'react'
-import { Button } from 'wind-design'
-import 'wind-design/dist/style.css'
+import React from 'react';
+import { Button } from 'wind-design';
+import 'wind-design/dist/style.css';
 
 const Dash = () => {
   return (
     <div>
-      <Button btnType="dashed">Dashed Button</Button>
+      <Button btnType='dashed'>Dashed Button</Button>
     </div>
-  )
-}
+  );
+};
 
-export default Dash
+export default Dash;

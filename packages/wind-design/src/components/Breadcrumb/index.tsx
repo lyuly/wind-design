@@ -1,6 +1,6 @@
-import classNames from 'classnames'
-import { memo, ReactNode } from 'react'
-import { useNavigate } from 'react-router-dom'
+import classNames from 'classnames';
+import { memo, ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 /* 
 在这里我们使用react-router实现跳转
@@ -10,34 +10,34 @@ active 活动
 */
 
 export type BreadcrumbOptions = {
-  label: string | ReactNode
-  to: string
-  active?: boolean
-}
+  label: string | ReactNode;
+  to: string;
+  active?: boolean;
+};
 
 export interface BreadcrumbProps {
-  className?: string
-  options: BreadcrumbOptions[]
-  iconType?: string
-  style?: React.CSSProperties
+  className?: string;
+  options: BreadcrumbOptions[];
+  iconType?: string;
+  style?: React.CSSProperties;
 }
 
 export const Breadcrumb = (props: BreadcrumbProps) => {
-  const { className, options, iconType, style, ...restProps } = props
+  const { className, options, iconType, style, ...restProps } = props;
 
-  const cls = classNames('breadcrumb', className)
+  const cls = classNames('breadcrumb', className);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const Goto = (url: string) => {
-    if (!url) return
+    if (!url) return;
     if (url && url.startsWith('http')) {
-      window.open(url)
+      window.open(url);
     } else {
-      navigate(url)
+      navigate(url);
     }
-    return
-  }
+    return;
+  };
 
   return (
     <div className={cls} style={style} {...restProps}>
@@ -85,15 +85,15 @@ export const Breadcrumb = (props: BreadcrumbProps) => {
               </div>
             ) : null}
           </div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
 Breadcrumb.defaultProps = {
   options: [],
   iconType: 'sprit',
-}
+};
 
-export default memo(Breadcrumb)
+export default memo(Breadcrumb);

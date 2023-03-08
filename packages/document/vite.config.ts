@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
-import typescript from '@rollup/plugin-typescript'
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import typescript from '@rollup/plugin-typescript';
 
 export default defineConfig({
   build: {
@@ -28,4 +28,4 @@ export default defineConfig({
       rootDir: resolve(__dirname, 'src'),
     }),
   ],
-})
+});
