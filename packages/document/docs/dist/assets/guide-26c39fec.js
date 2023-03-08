@@ -1,2 +1,0 @@
-import{p as c}from"./guide_-2ce56e4c.js";import{u as s,j as t,a as i,F as r}from"./index-c8bce964.js";function o(e){const n=Object.assign({h1:"h1",p:"p"},s(),e.components);return i(r,{children:[t(n.h1,{id:"guide",children:"Guide"}),`
-`,t(n.p,{children:"..."})]})}function u(e={}){const{wrapper:n}=Object.assign({},s(),e.components);return n?t(n,Object.assign({},e,{children:t(o,e)})):o(e)}const l=Object.freeze(Object.defineProperty({__proto__:null,default:u},Symbol.toStringTag,{value:"Module"})),a={};a.outlineInfo=c;a.main=l;export{a as default};
