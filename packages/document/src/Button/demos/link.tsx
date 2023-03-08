@@ -4,16 +4,18 @@
  * @order 3
  */
 
-import React from 'react'
-import { Button } from 'wind-design'
-import 'wind-design/dist/style.css'
+import React from 'react';
+import { Button } from 'wind-design';
+import 'wind-design/dist/style.css';
 
 const Link = () => {
   return (
     <div>
-      <Button btnType="link" href="https://www.google.com">Link Button</Button>
+      <Button btnType='link' href='https://www.google.com'>
+        Link Button
+      </Button>
     </div>
-  )
-}
+  );
+};
 
-export default Link
+export default Link;

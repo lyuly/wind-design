@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react'
-import classNames from 'classnames'
-import Icon from '../Icon'
+import React, { ReactNode } from 'react';
+import classNames from 'classnames';
+import Icon from '../Icon';
 
 /* 
 我们的按钮具有以下属性:
@@ -14,7 +14,7 @@ iconName: 图标名字
 loading: 加载图标
 */
 
-export type ButtonSize = 'lg' | 'sm' | 'md'
+export type ButtonSize = 'lg' | 'sm' | 'md';
 
 export type ButtonType =
   | 'default'
@@ -25,24 +25,24 @@ export type ButtonType =
   | 'warning'
   | 'link'
   | 'text'
-  | 'dashed'
+  | 'dashed';
 interface BaseButtonProps {
-  className?: string
-  disabled?: boolean
-  size?: ButtonSize
-  btnType?: ButtonType
-  children?: ReactNode
-  href?: string
-  gost?: boolean
-  round?: boolean
-  iconName?: string
-  loading?: boolean
+  className?: string;
+  disabled?: boolean;
+  size?: ButtonSize;
+  btnType?: ButtonType;
+  children?: ReactNode;
+  href?: string;
+  gost?: boolean;
+  round?: boolean;
+  iconName?: string;
+  loading?: boolean;
 }
 
 type AnchorButtonProps = BaseButtonProps &
-  React.ButtonHTMLAttributes<HTMLElement>
+  React.ButtonHTMLAttributes<HTMLElement>;
 
-export type ButtonProps = Partial<AnchorButtonProps>
+export type ButtonProps = Partial<AnchorButtonProps>;
 
 const Button = (props: ButtonProps) => {
   const {
@@ -57,21 +57,21 @@ const Button = (props: ButtonProps) => {
     iconName,
     loading,
     ...restProps
-  } = props
+  } = props;
 
   const cls = classNames('btn', className, {
     [`btn--${btnType}`]: btnType,
     [`btn--${size}`]: size !== 'md',
     [`btn--${btnType}_gost`]: gost,
     'btn--round': round,
-  })
+  });
 
   if (btnType === 'link' && href) {
     return (
       <button className={cls} disabled={disabled} {...restProps}>
         <a href={href}>{children}</a>
       </button>
-    )
+    );
   } else {
     return (
       <button className={cls} disabled={disabled} {...restProps}>
@@ -82,13 +82,13 @@ const Button = (props: ButtonProps) => {
         ></Icon>
         {children}
       </button>
-    )
+    );
   }
-}
+};
 
 Button.defaultProps = {
   disabled: false,
   btnType: 'default',
-}
+};
 
-export default Button
+export default Button;

@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import React from 'react'
-import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc'
+import React from 'react';
+import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc';
 
-import Component404 from './404'
+import Component404 from './404';
 
 export default createTheme({
   logo: <div style={{ fontSize: '20px' }}>Wind Design</div>,
@@ -42,7 +42,7 @@ export default createTheme({
           },
         },
       },
-    })
+    });
   },
   Component404,
-})
+});
