@@ -1,8 +1,8 @@
 # wind design
 
-This is a UI component which using react、tailwindcss、vite and mdx
+轻量、可定制化、tree shaking的 React 组件库
 
-## How to use
+## 如何食用
 
 To be improved...
 

@@ -6,10 +6,10 @@ import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc'
 import Component404 from './404'
 
 export default createTheme({
-  logo: <div style={{ fontSize: '20px' }}>🐳 Wind design</div>,
+  logo: <div style={{ fontSize: '20px' }}>Wind Design</div>,
   topNavs: [
     {
-      label: 'Index',
+      label: '首页',
       path: '/',
       activeIfMatch: {
         // match all first-level paths
@@ -18,7 +18,7 @@ export default createTheme({
       },
     },
     {
-      label: 'Components',
+      label: '组件',
       path: '/components/Button',
       activeIfMatch: '/components',
     },
