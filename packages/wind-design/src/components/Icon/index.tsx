@@ -14,7 +14,7 @@ size图标尺寸
 export type IconSize = 'lg' | 'sm' | 'md';
 
 export type IconProps = {
-  name: string;
+  name?: string;
   loading?: boolean;
   onClick?: (e: React.MouseEvent<SVGElement>) => void;
   href?: string;
@@ -23,7 +23,6 @@ export type IconProps = {
   style?: React.CSSProperties;
   url?: string;
   size?: IconSize;
-  position?: string;
 };
 
 const IconFont: React.FC<IconProps> = ({ name, onClick, className, style }) => {
@@ -48,7 +47,6 @@ const Icon = ({
   className,
   loading,
   onClick,
-  position = 'left',
   show,
   url,
   size = 'md',
@@ -65,8 +63,7 @@ const Icon = ({
   const cls = classNames(className, {
     'cursor-pointer': href || onClick,
     'icon--loading': loading,
-    [`icon--${size}`]: size,
-    [`icon--position_${position}`]: position,
+    [`icon--${size}`]: size
   });
 
   useMount(() => {

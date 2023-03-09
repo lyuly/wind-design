@@ -1,5 +1,7 @@
 # Ignore artifacts:
 build
 coverage
-storybook-static
 node_modules
+.dumi/tmp
+.dumi/tmp-production
+*.yaml
