@@ -9,6 +9,10 @@ subGroup: 基础组件
 
 <Demo src="./demos/icon.tsx" />
 
-## 多彩图标
+## 彩色图标
 
 <Demo src="./demos/color.tsx" />
+
+## 点击图标
+
+<Demo src="./demos/click.tsx" />

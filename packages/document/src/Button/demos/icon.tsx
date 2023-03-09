@@ -5,24 +5,38 @@
  */
 
 import React from 'react';
-import { Button } from 'wind-design';
+import { Button, Icon } from 'wind-design';
 import 'wind-design/dist/style.css';
 
-const Icon = () => {
+const ButtonIcon = () => {
   return (
     <div>
-      <Button iconName='daimawangzhan'>Github Button</Button>
-      <Button iconName='zhuye' btnType='success'>
-        主页按钮
+      <Button>
+        <Icon name='github-fill'/>
+        Github
       </Button>
-      <Button iconName='aixin' btnType='danger'>
-        Love Button
+      <Button btnType='primary'>
+        <Icon name='search'/>
+        Search
       </Button>
-      <Button iconName='huiyuan' btnType='warning'>
-        会员按钮
+      <Button btnType='info'>
+        <Icon name='bell'/>
+        Bell
+      </Button>
+      <Button btnType='success'>
+      <Icon name='home'/>
+        Home
+      </Button>
+      <Button btnType='warning'>
+        <Icon name='skin'/>
+        T-shirt
+      </Button>
+      <Button btnType='danger'>
+        <Icon name='alert'/>
+        Alert
       </Button>
     </div>
   );
 };
 
-export default Icon;
+export default ButtonIcon;

@@ -5,20 +5,35 @@
  */
 
 import React from 'react';
-import { Button } from 'wind-design';
+import { Button, Icon } from 'wind-design';
 import 'wind-design/dist/style.css';
 
 const Load = () => {
   return (
     <div>
-      <Button iconName='loading' loading>
-        Loading Button
+      <Button>
+        <Icon name='loading' loading/>
+        Loading
       </Button>
-      <Button iconName='loading' loading btnType='primary'>
-        Loading Button
+      <Button btnType='primary'>
+        <Icon name='loading' loading/>
+        Loading
       </Button>
-      <Button iconName='loading' loading btnType='success'>
-        Loading Button
+      <Button btnType='info'>
+        <Icon name='loading' loading/>
+        Loading
+      </Button>
+      <Button btnType='success'>
+        <Icon name='loading' loading/>
+        Loading
+      </Button>
+      <Button btnType='warning'>
+        <Icon name='loading' loading/>
+        Loading
+      </Button>
+      <Button btnType='danger'>
+        <Icon name='loading' loading/>
+        Loading
       </Button>
     </div>
   );

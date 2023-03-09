@@ -13,6 +13,7 @@ module.exports = {
   requirePragma: false, //无需顶部注释即可格式化
   insertPragma: false,
   proseWrap: 'preserve',
+  trailingComma: 'all',
   htmlWhitespaceSensitivity: 'ignore',
   endOfLine: 'lf',
   embeddedLanguageFormatting: 'auto',

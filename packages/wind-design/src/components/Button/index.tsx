@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
-import Icon from '../Icon';
 
 /* 
 我们的按钮具有以下属性:
@@ -35,7 +34,6 @@ interface BaseButtonProps {
   href?: string;
   gost?: boolean;
   round?: boolean;
-  iconName?: string;
   loading?: boolean;
 }
 
@@ -54,7 +52,6 @@ const Button = (props: ButtonProps) => {
     href,
     gost,
     round,
-    iconName,
     loading,
     ...restProps
   } = props;
@@ -75,11 +72,6 @@ const Button = (props: ButtonProps) => {
   } else {
     return (
       <button className={cls} disabled={disabled} {...restProps}>
-        <Icon
-          name={iconName as string}
-          show={iconName !== undefined}
-          loading={loading}
-        ></Icon>
         {children}
       </button>
     );

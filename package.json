@@ -4,13 +4,19 @@
   "description": "<img src=\"https://img.shields.io/tokei/lines/github/lyuly/wind-design\"> <img src=\"https://img.shields.io/github/last-commit/lyuly/wind-design\">",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm -C packages/document dev",
+    "docs:dev": "pnpm -C packages/document dev",
     "build": "pnpm -C packages/wind-design build && pnpm -C packages/document build",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "packages/**/*.{jsx, tsx, ts, js, md,json}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "lyuly",
+  "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "eslint": "^8.0.1",
@@ -20,6 +26,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "typescript": "*"
   }
 }

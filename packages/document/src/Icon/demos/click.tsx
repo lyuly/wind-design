@@ -1,6 +1,6 @@
 /**
- * @title Icon 默认图标
- * @description 默认图标
+ * @title Icon 点击图标
+ * @description 点击图标
  * @order 5
  */
 
@@ -11,7 +11,7 @@ import 'wind-design/dist/style.css';
 const Default = () => {
   return (
     <>
-      <Icon name='github-fill'/>
+      <Icon name='github-fill' onClick={() => {console.log('1')}}/>
       <Icon name='search'/>
       <Icon name='bell'/>
       <Icon name='home'/>
@@ -21,4 +21,4 @@ const Default = () => {
   );
 };
 
-export default Default
+export default Default;
