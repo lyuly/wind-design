@@ -1,6 +1,6 @@
 /**
  * @title Breadcrumb 默认面包屑
- * @description 默认面包屑
+ * @description 定义一个options数组
  * @order 1
  */
 

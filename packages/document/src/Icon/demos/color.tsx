@@ -1,7 +1,7 @@
 /**
  * @title Icon 彩色图标
- * @description 彩色图标
- * @order 5
+ * @description 通过 style 自定义颜色
+ * @order 2
  */
 
 import React from 'react';

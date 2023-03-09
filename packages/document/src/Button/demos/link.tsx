@@ -1,6 +1,6 @@
 /**
  * @title Button 链接按钮
- * @description 链接按钮
+ * @description 通过 link 类型指定
  * @order 3
  */
 

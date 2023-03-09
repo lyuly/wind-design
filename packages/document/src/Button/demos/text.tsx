@@ -1,6 +1,6 @@
 /**
  * @title Button 文本按钮
- * @description 文本按钮
+ * @description 通过 text 指定
  * @order 4
  */
 

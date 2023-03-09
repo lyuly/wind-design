@@ -1,7 +1,7 @@
 /**
  * @title Icon 点击图标
- * @description 点击图标
- * @order 5
+ * @description 通过 onClick 事件
+ * @order 3
  */
 
 import React from 'react';
