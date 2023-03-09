@@ -1,6 +1,6 @@
 /**
  * @title Breadcrumb 活跃面包屑
- * @description 活跃面包屑
+ * @description 对象里使用 active 标志是否被激活
  * @order 2
  */
 

@@ -1,6 +1,6 @@
 /**
  * @title Button 加载按钮
- * @description 加载按钮
+ * @description loading 定义加载
  * @order 10
  */
 

@@ -1,6 +1,6 @@
 /**
  * @title Button 尺寸按钮
- * @description 尺寸按钮
+ * @description 通过 size 参数指定，包括 sm（小）、md（默认）、lg（大）
  * @order 7
  */
 

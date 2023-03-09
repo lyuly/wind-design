@@ -1,6 +1,6 @@
 /**
  * @title Button 禁用按钮
- * @description 按钮禁用
+ * @description 使用 disabled 区分
  * @order 2
  */
 

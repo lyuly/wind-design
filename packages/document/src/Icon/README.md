@@ -16,3 +16,7 @@ subGroup: 基础组件
 ## 点击图标
 
 <Demo src="./demos/click.tsx" />
+
+## 尺寸图标
+
+<Demo src="./demos/size.tsx" />

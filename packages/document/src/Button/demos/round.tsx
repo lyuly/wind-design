@@ -1,6 +1,6 @@
 /**
  * @title Button 圆角按钮
- * @description 圆角按钮
+ * @description 通过 round 指定
  * @order 7
  */
 

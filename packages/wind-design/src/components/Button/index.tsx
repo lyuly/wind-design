@@ -7,7 +7,7 @@ btnType: 类型
 size: 尺寸
 disabled: 是否禁用
 href: 链接地址
-gost: 幽灵按钮
+plain: 朴素按钮
 children: 按钮中的文本
 iconName: 图标名字
 loading: 加载图标
@@ -32,7 +32,7 @@ interface BaseButtonProps {
   btnType?: ButtonType;
   children?: ReactNode;
   href?: string;
-  gost?: boolean;
+  plain?: boolean;
   round?: boolean;
   loading?: boolean;
 }
@@ -50,7 +50,7 @@ const Button = (props: ButtonProps) => {
     size = 'md',
     children,
     href,
-    gost,
+    plain,
     round,
     loading,
     ...restProps
@@ -59,7 +59,7 @@ const Button = (props: ButtonProps) => {
   const cls = classNames('btn', className, {
     [`btn--${btnType}`]: btnType,
     [`btn--${size}`]: size !== 'md',
-    [`btn--${btnType}_gost`]: gost,
+    [`btn--${btnType}_plain`]: plain,
     'btn--round': round,
   });
 

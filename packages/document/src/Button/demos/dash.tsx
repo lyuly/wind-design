@@ -1,6 +1,6 @@
 /**
  * @title Button 虚线按钮
- * @description 虚线按钮
+ * @description 使用 dash 区分
  * @order 5
  */
 
