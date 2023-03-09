@@ -21,10 +21,10 @@ git clone https://github.com/lyuly/wind-design.git
 npm i
 
 # Starting the development server
-npm run storybook
+npm run docs:dev
 
 # Compile
-npm run build-storybook
+npm run build
 ```
 
 ## About me
