@@ -9,6 +9,6 @@ subGroup: 其他
 
 <Demo src="./demos/default.tsx" />
 
-## 尺寸警告
+## 关闭警告
 
-<Demo src="./demos/size.tsx" />
+<Demo src="./demos/close.tsx" />
