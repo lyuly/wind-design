@@ -6,6 +6,7 @@
   "scripts": {
     "docs:dev": "pnpm -C packages/wind-design build && pnpm -C packages/document dev",
     "docs:build": "pnpm -C packages/wind-design build && pnpm -C packages/document build",
+    "dev": "pnpm -C packages/wind-design dev",
     "prepare": "husky install"
   },
   "lint-staged": {

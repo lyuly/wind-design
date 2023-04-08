@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path, { resolve } from 'path';
 import * as pkg from './package.json';
-import classNames from 'classnames';
 
 const externals = [
   ...Object.keys(pkg.dependencies || {}),

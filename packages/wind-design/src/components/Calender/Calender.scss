@@ -1,0 +1,35 @@
+.calender {
+  @apply border border-gray-300 rounded-lg p-1 w-80;
+}
+
+.header {
+  @apply flex justify-between items-center mb-1;
+}
+
+.title {
+  @apply font-semibold;
+}
+
+.weekdays {
+  @apply flex justify-between mb-1;
+}
+
+.days {
+  @apply grid grid-cols-7 grid-rows-5 gap-6 justify-between items-center;
+}
+
+.prev {
+  @apply text-gray-400 text-base cursor-pointer hover:text-blue-600;
+}
+
+.next {
+  @apply text-gray-400 text-base cursor-pointer hover:text-blue-600;
+}
+
+.selected {
+  @apply text-sm hover:bg-gray-200 rounded-md text-center;
+}
+
+.today {
+  @apply text-sm border bg-blue-600 text-white aspect-square rounded-md text-center;
+}

@@ -1,0 +1,8 @@
+.wind-datepicker {
+  @apply relative inline-flex items-center w-full;
+}
+
+.wind-picker-suffix {
+  margin-inline-start: -1.5em;
+  @apply flex flex-none self-center leading-none pointer-events-none dark:text-white;
+}

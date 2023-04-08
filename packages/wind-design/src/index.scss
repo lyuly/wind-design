@@ -2,9 +2,11 @@
 @tailwind components;
 
 @import './components/Button/button.scss';
-@import './components//Breadcrumb//breadcrumb.scss';
+@import './components/Breadcrumb/breadcrumb.scss';
 @import './components/Alert/alert.scss';
-@import './components//Icon/icon.scss';
-@import './components//Checkbox/checkbox.scss';
+@import './components/Icon/icon.scss';
+@import './components/Checkbox/checkbox.scss';
+@import './components/DatePicker/datePicker.scss';
+@import './components/Calender/Calender.scss';
 
 @tailwind utilities;
