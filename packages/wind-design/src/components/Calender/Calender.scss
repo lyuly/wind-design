@@ -1,5 +1,5 @@
 .calender {
-  @apply border border-gray-300 rounded-lg p-1 w-80;
+  @apply border border-gray-300 rounded-lg p-2 max-w-sm;
 }
 
 .header {
@@ -15,7 +15,7 @@
 }
 
 .days {
-  @apply grid grid-cols-7 grid-rows-5 gap-6 justify-between items-center;
+  @apply grid grid-cols-7 grid-rows-5 gap-3 justify-between items-center;
 }
 
 .prev {
@@ -27,9 +27,9 @@
 }
 
 .selected {
-  @apply text-sm hover:bg-gray-200 rounded-md text-center;
+  @apply text-sm hover:bg-gray-200 hover:cursor-pointer rounded-md text-center;
 }
 
 .today {
-  @apply text-sm border bg-blue-600 text-white aspect-square rounded-md text-center;
+  @apply text-sm border bg-blue-600 text-white hover:cursor-pointer aspect-square rounded-md text-center;
 }

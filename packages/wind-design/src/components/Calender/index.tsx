@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function Calender() {
+function Calender(props: any) {
 
   const [date, setDate] = useState<Date>(new Date());
 
@@ -52,6 +52,7 @@ function Calender() {
   const select = (day: Date) => {
     const year = date.getFullYear();
     const month = date.getMonth();
+    props.onData(new Date(year, month, day.getDate()));
     return new Date(year, month, day.getDate());
   }
 
@@ -62,9 +63,9 @@ function Calender() {
   return (
     <div className="calender">
       <div className="header">
-        <span className="prev" onClick={() => prevMonth()}>&lt;</span>
+        <button className="prev" onClick={() => prevMonth()}>&lt;</button>
         <span className="title">{now}</span>
-        <span className="next" onClick={() => nextMonth()}>&gt;</span>
+        <button className="next" onClick={() => nextMonth()}>&gt;</button>
       </div>
       <div className="body">
         <div className="weekdays">

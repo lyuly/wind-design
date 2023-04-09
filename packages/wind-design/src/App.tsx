@@ -1,12 +1,12 @@
 import React from "react";
 import DatePicker from "./components/DatePicker";
-import Calender from "./components/Calender";
+// import Calender from "./components/Calender";
 
 function App() {
   return (
     <div>
       <DatePicker/>
-      <Calender/>
+      {/* <Calender/> */}
     </div>
   )
 }
